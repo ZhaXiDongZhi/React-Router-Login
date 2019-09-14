@@ -1,0 +1,114 @@
+html,body{
+	height:100%;
+	width:100%;
+}
+
+ul,li{
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+
+.bgBubbles{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	overflow: hidden;
+}
+
+.bgBubbles li{
+	position:absolute;
+	display: block;
+	width:40px;
+	height:40px;
+	background-color:rgba(255,255,255,0.15);
+	border-radius: 50%;
+	bottom:-100px;
+	animation: login 10s infinite;
+	transition-timing-function: linear;
+}
+
+.bgBubbles li:nth-child(1){left:3%;}
+.bgBubbles li:nth-child(2){width:30px;height:30px;left:20%;animation-delay:2s }
+.bgBubbles li:nth-child(3){width:100px;height:100px;left:35%;animation-delay:3s}
+.bgBubbles li:nth-child(4){width:20px;height:20px;left:30%;animation-delay:6s }
+.bgBubbles li:nth-child(5){width:60px;height:60px;left:60%;animation-delay:11s }
+.bgBubbles li:nth-child(6){width:70px;height:70px;left:80%;animation-delay:7s }
+.bgBubbles li:nth-child(7){width:26px;height:26px;left:45%;animation-delay:10s }
+.bgBubbles li:nth-child(8){width:46px;height:46px;left:26%;animation-delay:8s }
+.bgBubbles li:nth-child(9){width:40px;height:40px;left:60%;animation-delay:5s }
+.bgBubbles li:nth-child(10){width:50px;height:50px;left:40%;animation-delay:4s }
+.bgBubbles li:nth-child(11){width:30px;height:30px;left:70%;animation-delay:1s }
+.content_box{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+.login_wrapper{
+	 position: absolute;
+	 top:0px;
+	 left:0px;
+	 height:100%;
+	 width:100%;
+	 background: #46a6ff;
+	 opacity:1.0;
+	 background:linear-gradient(to bottom right, #46a6ff 0%, #03529c 100%);
+	
+}
+.content_login{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:100%;
+	margin:auto;
+	z-index:2;
+}
+.box{
+	 width:300px;
+	 position:absolute;
+	 top:50%;
+	 left:50%;
+	 transform: translate(-50%,-50%);
+	 -webkit-transform:translate(-50%,-50%);
+	padding:20px;
+	border-radius: 10px;
+	box-shadow: 0 0 100px rgba(0,0,0,0.08);
+}
+
+.login-form-bottom{
+	width:100%;
+}
+
+@-webkit-keyframes login {
+	0%{
+		transform: translateY(0);
+		-webkit-transform:translateY(0);
+	}
+	100%{
+		transform:translateY(-700px) ;
+		-webkit-transform:translateY(-700px); 
+	}
+}
+
+@keyframes login {
+	0%{
+		transform: translateY(0);
+		-webkit-transform:translateY(0);
+	}
+	100%{
+		transform:translateY(-700px);
+		-webkit-transform:translateY(-700px);
+	}
+}
+
+@media screen and (max-width: 400px){
+	.box{
+		width:100%;
+	}
+}
